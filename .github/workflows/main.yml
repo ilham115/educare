@@ -8,10 +8,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: .
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -22,7 +18,9 @@ jobs:
         node-version: 18
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        npm install
 
     - name: Run test
-      run: npx jest
+      run: |
+        npm run test
