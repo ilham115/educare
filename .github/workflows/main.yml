@@ -24,7 +24,7 @@ jobs:
       run: npm run lint || true
 
     - name: Run test
-      run: npx jest
+      run: node ./node_modules/jest/bin/jest.js
 
     - name: Build
       run: npm run build || true
