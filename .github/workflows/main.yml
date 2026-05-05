@@ -31,3 +31,9 @@ jobs:
 
     - name: Code Quality Check
       run: node ./node_modules/eslint/bin/eslint.js .
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: project-files
+        path: .
