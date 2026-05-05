@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "echo lint success"
+    "lint": "eslint .",
+    "build": "echo build success"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +16,8 @@
     "express": "^5.2.1",
     "jest": "^30.3.0",
     "supertest": "^7.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^10.3.0"
   }
 }
