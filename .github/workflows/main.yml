@@ -21,10 +21,13 @@ jobs:
       run: npm install
 
     - name: Lint
-      run: node ./node_modules/eslint/bin/eslint.js 
+      run: node ./node_modules/eslint/bin/eslint.js .
 
     - name: Run test
       run: node ./node_modules/jest/bin/jest.js
 
     - name: Build
       run: npm run build || true
+
+    - name: Code Quality Check
+      run: node ./node_modules/eslint/bin/eslint.js .
