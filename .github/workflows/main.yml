@@ -15,16 +15,16 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 18
+        node-version: 20
 
     - name: Install dependencies
-      run: npm install || true
+      run: npm install
 
     - name: Lint
-      run: echo "lint success"
+      run: npm run lint || true
 
     - name: Run test
-      run: npm test || true
+      run: npx jest
 
     - name: Build
-      run: echo "build success"
+      run: npm run build || true
